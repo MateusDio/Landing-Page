@@ -1,0 +1,90 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #a06c3f;
+    color: #F3F3F3;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: #834a09;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+#atc {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f3f3f3;
+}
+
+#Cabeça .nav-container {
+    display: flex;
+    gap: 30px;
+}
+
+#Cabeça .nav-container a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+#Cabeça .nav-container a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+#Cabeça .nav-container a:hover::after {
+    width: 100%;
+}
+
+#Cabeça .nav-container a:hover {
+    color: #6eb90c;
+}
+
+#home {
+    background-image: url(img/museu.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+}
+
+h1 {
+    font-size: 50px;
+  font-size: 50px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+}
