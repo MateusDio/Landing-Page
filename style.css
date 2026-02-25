@@ -14,6 +14,7 @@ body {
     height: 100%;
     background-color: #aa7d4a;
     color: #F3F3F3;
+    scroll-behavior: smooth;
     
 }
 
@@ -30,6 +31,11 @@ header {
     z-index: 999;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
+
+.anm {
+    animation: aparecendo 1s ease;
+}
+
 
 #atc {
     font-size: 40px;
@@ -90,6 +96,11 @@ h1 {
     border-radius: 10px;
 }
 
+h2 {
+    font-size: 36px;
+
+}
+
 #sobre {
     min-height: 100vh;
     background-color: #aa7d4a;
@@ -129,9 +140,9 @@ h1 {
 .cards {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
 }
+
 
 .card {
     flex: 1 1 300px;
@@ -170,10 +181,7 @@ h1 {
     transition: 0.4s;
 }
 
-.card.active {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-5px) scale(1.05);
-}
+
 
 .rodape {
     background-color: #ad722f;
@@ -303,48 +311,153 @@ img {
     transition: transform 0.3s, opacity 0.3s;
 }
 
+
 .contato-container {
     background-color: #b8844e;
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 500px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;   
+    justify-content: space-between;
     align-items: center;
-    gap: 3px;
+    padding: 20px 40px;
+    gap: 40px;
     border-radius: 10px;
-        background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
+
 
 #contato {
     display: flex;
     justify-content: center;
-    padding: 100px 8%;
+    padding: 100px ;
+    flex-direction: column;
     
 }
+
+#contato img{
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+   
 
 input {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 200px;
+    width: 500px;
 }
 
 textarea {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 200px;
-    height: 80px;
+    width: 500px;
+    height: 100px;
 }
 
-button {
-    border: none;
-    border-style: none;
-    border-radius: 5px;
-    width: 70px;
-    height: 40px;
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+#enviar {
+    align-self: flex-start;
+    margin-top: 10px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#enviar:hover {
+    transform: scale(1.05);
+}
+
+
+.carrossel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 8000px;
+    margin: 0 auto;
+    padding-inline: 64px;
+}
+
+.carrossel>button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+}
+
+
+#anterior {
+    left: -0.1px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #f3f3f3;
+    
+}
+
+#anterior:hover {
+    background-color: #d3cfcf;
+    color: #000;   
+}
+
+#proximo {
+    right: -0.1px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #f3f3f3;
+}
+
+#proximo:hover {
+   background-color: #d3cfcf;
+    color: #000;   
+}
+
+
+.card-container {
+    width: 700px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
 
 @media (max-width: 768px) {
 
@@ -510,4 +623,81 @@ button {
     .imagem-dinamica img {
         width: 100%;
     }
+}
+
+@keyframes aparecendo {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes entrarDaDireita {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes sairParaEsquerda {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes entrarDaEsquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes sairParaDireita {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.anm {
+    opacity: 0;
+    animation: aparecendo 1s ease forwards;
+}
+
+.anm-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.anm-delay-2 {
+    animation-delay: 0.4s;
+}
+
+.anm-delay-3 {
+    animation-delay: 0.6s;
 }

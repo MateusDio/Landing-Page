@@ -24,12 +24,12 @@
     </header>
     <main>
 
-        <section id="home">
+        <section id="home"  class="anm anm-delay-1">
             <h1 id="nome">Museu Contos da Grécia</h1>
             <h2>Seja bem-vindo a Grécia Antiga!</h2>
         </section>
 
-        <section id="sobre">
+        <section id="sobre" class="anm anm-delay-2">
             <h2 class="titulo">Sobre o Museu</h2>
 
             <div class="sobre-container">
@@ -57,20 +57,46 @@
             </div>
 
             <div class="cards">
-                <div class="card active" data-img="img/arquitetura.jpg">Arquitetura histórica</div>
-                <div class="card" data-img="img/herois.webp">Heróis lendários</div>
-                <div class="card" data-img="img/esculturas.webp">Esculturas clássicas</div>
-                <div class="card" data-img="img/historia.webp">Historias interativas</div>
+                <div class="card active" >Arquitetura histórica</div>
+                <div class="card" >Heróis lendários</div>
+                <div class="card" >Esculturas clássicas</div>
+                <div class="card" >Historias interativas</div>
             </div>
 
-            <div class="imagem-dinamica">
-                <img id="imgDinamica" src="img/arquitetura.jpg" alt="Imagem ilustrativa">
-            </div>
-        </section>
+            <div class="carrossel">
+      <button id="anterior">&#10094;</button>
+
+      <div class="card-container">
+        <div class="card1">
+          <img src="img/arquitetura.jpg" alt="HTML">
+        
+        </div>
+
+        <div class="card1">
+          <img src="img/esculturas.webp" alt="CSS">
+          
+        </div>
+
+        <div class="card1">
+          <img src="img/herois.webp" alt="JavaScript">
+          </div>
+
+        <div class="card1">
+          <img src="img/historia.webp" alt="Java">
+     
+        </div>
+
+
+      </div>
+
+      <button id="proximo">&#10095;</button>
+    </div>
+  </section>
+    
 
 
 
-        <section id="avaliacao">
+        <section id="avaliacao" class="anm anm-delay-2">
             <h2 class="titulo">Avaliações</h2>
 
             <div class="cards">
@@ -103,14 +129,29 @@
 
         <div id="cima"> <img src="img/cima.png" alt=""></div>
 
-        <section id="contato">
-            <div class="contato-container">
-                <input type="text" placeholder="Digite seu nome aqui">
-                <input type="email" placeholder="Digite seu email aqui">
-                <textarea placeholder="Digite sua mensagem aqui"></textarea>
-<button id="enviar">Enviar</button>
-            </div>
-        </section>
+        <section id="contato" class="anm anm-delay-2">
+    <h2>Entre em contato conosco</h2>
+
+    <div class="contato-container">
+
+        <div class="contato-form">
+            <h3>Nome: </h3>
+            <input type="text" placeholder="Digite seu nome aqui">
+
+            <h3>Email: </h3>
+            <input type="email" placeholder="Digite seu email aqui">
+
+            <h3>Senha: </h3>
+            <textarea placeholder="Digite sua mensagem aqui"></textarea>
+
+            <button id="enviar" >Enviar Mensagem</button>
+        </div>
+
+           
+        <img src="img/contato.avif" alt="">
+
+    </div>
+</section>
 
 
     </main>
