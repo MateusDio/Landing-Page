@@ -3,6 +3,18 @@ const imagem = document.getElementById("imgDinamica");
 const cima = document.getElementById("cima");
 const scrollsuave = document.querySelector(".scroll-suave");
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".contato-form");
+
+
+
+        alert("Mensagem enviada com sucesso!");
+
+   
+  
+
+});
       
 document.addEventListener("DOMContentLoaded", () => {
 
